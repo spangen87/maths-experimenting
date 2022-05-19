@@ -34,8 +34,8 @@ function runGame(gameType) {
     document.getElementById("answer-box").focus();
 
     // Creates two random numbers between 1 and 25
-    let num1 = Math.floor(Math.random() * 25) + 1;
-    let num2 = Math.floor(Math.random() * 25) + 1;
+    let num1 = Math.floor(Math.random() * 5) + 1;
+    let num2 = Math.floor(Math.random() * 5) + 1;
 
     if (gameType === "addition") {
         displayAdditionQuestion(num1, num2);
@@ -64,10 +64,10 @@ function checkAnswer() {
     let isCorrect = userAnswer === calculatedAnswer[0];
 
     if (isCorrect) {
-        alert("Hey! You got it right! :D");
+        alert("Grattis! Ditt svar var rätt! :D");
         incrementScore();
     } else {
-        alert(`Awwww.... you answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`);
+        alert(`Åh nej... Ditt svar var: ${userAnswer}. Rätt svar var ${calculatedAnswer[0]}!`);
         incrementWrongAnswer();
     }
 
